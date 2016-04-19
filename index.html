@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sengab</title>
+    <!-- css styles -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel='stylesheet' href='bower_components/textAngular/dist/textAngular.css' media="screen" title="no title" charset="utf-8">
+    <!-- custome css styles -->
+    <link rel="stylesheet" href="styles/main.css" media="screen" title="no title" charset="utf-8">
+
+  </head>
+  <body ng-app="app">
+
+  <div id="wrapper" >
+    <!-- Navigation -->
+    <nav class="navbar navbar-fixed-top custom-nav" role="navigation">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+
+        </div>
+        <!-- Top Menu Items -->
+        <form class="navbar-form navbar-left pull-left" role="search">
+        <div class="form-group search-nav">
+          <input type="text" class="form-control search-input" placeholder="Search..">
+        </div>
+        </form>
+        <ul class="nav navbar-right pull-right top-nav">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-circle" src="images/me.jpg" alt="" style="width:40px;"/> Hi, Hassan <b class="caret"></b></a>
+                <!-- profile dropdown -->
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href=""><i class="fa fa-fw fa-user"></i> profile</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-fw fa-gear"></i> settings</a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa fa-fw fa-power-off"></i> log out</a>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+              <div class="logo">
+                <a class="navbar-brand" ui-sref="home"><img alt="sengab" src="images/logo.png" style="width:50px;"></a>
+              </div>
+                <li data-toggle="tooltip" data-placement="right"  title="categories">
+                    <a ui-sref-active="active" ui-sref="categories"><i class="fa fa-th-large"></i> </a>
+                </li>
+
+
+                  <li data-toggle="tooltip" data-placement="right" title="add project">
+                      <a data-toggle="modal" data-target="#add-modal" ui-sref-active="active" ui-sref="add"><i class="fa fa-plus-circle" style="padding-right:2px; padding-left:1px;" ></i></a>
+                  </li>
+
+
+                <li data-toggle="tooltip" data-placement="right"  title="enrolled projects">
+                    <a ui-sref-active="active" ui-sref="enrolled"><i class="fa fa-bookmark" style="padding-right:2px; padding-left:3px;"></i></a>
+                </li>
+
+                <li data-toggle="tooltip" data-placement="right"  title="my projects">
+                    <a ui-sref-active="active" ui-sref="myprojects"><i class="fa fa-list-alt" ></i> </a>
+                </li>
+                <li data-toggle="tooltip" data-placement="right"  title="friends">
+                    <a ui-sref-active="active" ui-sref="friends"><i class="fa fa-users"></i></a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+    <!-- nav -->
+
+    <div ui-view></div>
+
+    <!-- Add Modal -->
+    <div class="modal fade" id="add-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h1 class="text-center template-title">Start building your project.</h1>
+            <p class="text-center template-subtitle">please choose the template you want to use.</p>
+            <hr id="template-hr">
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid template-cards">
+
+                <div class="row">
+                   <div class="col-sm-3 col-md-3">
+                      <a  ui-sref="addlocation" class="thumbnail template add-m">
+                         <img class="template-image" src="images/location.png" alt="template">
+                         <h3 class="text-center template-txt">Location</h3>
+                      </a>
+                   </div>
+
+                   <div class="col-sm-3 col-md-3">
+                      <a ui-sref="addpics" class="thumbnail template add-m">
+                         <img class="template-image" src="images/pics.png" alt="template">
+                         <h3 class="text-center template-txt" >Pictures</h3>
+                      </a>
+                   </div>
+
+                   <div class="col-sm-3 col-md-3">
+                      <a ui-sref="addsurvey" class="thumbnail template add-m">
+                         <img class="template-image" src="images/survey.png" alt="template">
+                         <h3 class="text-center template-txt">Survey</h3>
+                      </a>
+                   </div>
+
+                   <div class="col-sm-3 col-md-3">
+                      <a ui-sref="addlocpic" class="thumbnail template add-m">
+                         <img class="template-image" src="images/locpic.png" alt="template">
+                         <h3 class="text-center template-txt">Locatoion + Pics</h3>
+                      </a>
+                   </div>
+
+                 </div>
+                 <!-- <div class="row">
+
+                   <div class="col-sm-3 col-md-3">
+                      <a href="locationandpic.html" class="thumbnail template">
+                         <img class="template-image" src="images/locpic.png" alt="template">
+                         <h3 class="text-center template-txt">Locatoion + Pics</h3>
+                      </a>
+                   </div>
+                   <div class="col-sm-3 col-md-3">
+                      <a href="locationandpic.html" class="thumbnail template">
+                         <img class="template-image" src="images/locpic.png" alt="template">
+                         <h3 class="text-center template-txt">Locatoion + Pics</h3>
+                      </a>
+                   </div>
+
+                </div> -->
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+  <!-- JS frameworks -->
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"> </script>
+  <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="bower_components/textAngular/dist/textAngular-rangy.min.js"></script>
+  <script type="text/javascript" src="bower_components/textAngular/dist/textAngular-sanitize.min.js"></script>
+  <script type="text/javascript" src="bower_components/textAngular/dist/textAngular.min.js"></script>
+  <script type="text/javascript" src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+  <script type="text/javascript" src="bower_components/ng-file-upload/ng-file-upload-shim.min.js"></script> <!-- for no html5 browsers support -->
+  <!-- my scripts -->
+  <script type="text/javascript" src="app/app.js"></script>
+  <!-- controllers -->
+  <script type="text/javascript" src="app/services/addproject.service.js"></script>
+  <script type="text/javascript" src="app/add/form.controller.js"></script>
+  <script type="text/javascript" src="app/add/convertimg.controller.js"></script>
+  <script type="text/javascript" src="app/add/survey/addquestions.controller.js"></script>
+
+  <script type="text/javascript">
+    // loading the tooltip
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip({
+        trigger : 'hover'
+      })
+    });
+    // closing the modal upon clicking in routing
+    $(".add-m").click(function(){
+      $('#add-modal').modal('hide');
+    });
+  </script>
+  </body>
+</html>

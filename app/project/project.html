@@ -1,0 +1,45 @@
+<div class="head">
+  <div class="col-sm-8">
+    <h2 class="title">Testing project title</h2>
+    <h5 class="subTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud velit esse </h5>
+  </div>
+
+  <div class="col-sm-4">
+    <div>
+      <div class="enroll-btns">
+        <button type="button" class="btn btn-lg btn-circle" name="disroll">
+          <i class="fa fa-bookmark icon-unlock" aria-hidden="true"></i>
+          <i class="fa fa-times icon-lock" aria-hidden="true"></i>
+        </button>
+
+        <button type="button" class="btn btn-lg btn-contribute" name="contribute">Contribute</button>
+      </div>
+      <div class="share">
+        <ul>
+          <li id="facebook"><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li id="twitter"><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li id="google"><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+          <li id="linkedin"><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          <li id="pinterest"><a href=""><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+<div class="sub-nav pull-left">
+    <!-- the links to our nested states using relative paths -->
+    <!-- add the active class if the state matches our ui-sref -->
+    <div id="status-buttons" class="text-center">
+        <a ui-sref-active="active" ui-sref="project.campaign({id:324242})"> <i class="fa fa-list-ul"></i> campaign</a>
+        <a ui-sref-active="active" ui-sref="project.stats({id:324242})" > <i class="fa fa-list-alt"></i></i> stats </a>
+        <a ui-sref-active="active" ui-sref="project.result({id:324242})" > <i class="fa fa-list-alt"></i></i> results </a>
+    </div>
+
+</div>
+
+<div ui-view></div>

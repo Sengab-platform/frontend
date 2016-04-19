@@ -1,0 +1,22 @@
+<div class="head">
+  <div class="col-sm-8">
+    <h2 class="title">{{$state.current.data.title}} </h2>
+    <h5 class="subTitle">{{$state.current.data.subtitle}} </h5>
+  </div>
+  <div class="col-sm-offset-1 col-sm-3 artimg">
+    <img src="../../images/{{$state.current.data.img}}.png" alt="" />
+  </div>
+</div>
+
+
+<div class="sub-nav pull-left">
+    <!-- the links to our nested states using relative paths -->
+    <!-- add the active class if the state matches our ui-sref -->
+    <div id="status-buttons" class="text-center">
+        <a ui-sref-active="active" ui-sref="enrolled.inprogress"> <i class="fa fa-list-ul"></i> in progress</a>
+        <a ui-sref-active="active" ui-sref="enrolled.completed" > <i class="fa fa-list-alt"></i></i> completed </a>
+    </div>
+
+</div>
+
+<div ui-view></div>
