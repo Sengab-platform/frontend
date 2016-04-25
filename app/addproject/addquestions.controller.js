@@ -1,7 +1,9 @@
 (function () {
   // add questions
   angular.module('app')
-    .controller('addQuesCtrl',['$scope', 'addProjectService', function($scope,addProjectService) {
+    .controller('addQuesCtrl',['$scope', 'addProjectService', addQuesCtrl]);
+
+    function addQuesCtrl ($scope,addProjectService) {
       $scope.questions = [{id: '1'} ];
       addProjectService.projectData.templateBody.count = 1;
       $scope.addNewQuestion = function() {
@@ -17,6 +19,6 @@
       };
       addProjectService.projectData.templateBody.questions = $scope.questions;
 
-    }])
+    }
 
 }());

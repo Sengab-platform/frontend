@@ -1,36 +1,30 @@
 <div class="container cards">
 
-   <div class="col-sm-6 col-md-4">
-      <a href="" class="thumbnail card">
-         <img class="card-image" src="images/img.jpeg" style="width: 340px; height: 255px" alt="card">
-         <h1 class="card-title">music Project name</h1>
-         <h6 class="card-subheader">By Radwa Kamal on 26 Mar, 2015</h6>
-         <p class="card-txt">
-           Design better and faster , Ensure your users experience your prototypes ,This Project Intend To Help Designers To Express Thier Projects Visually ..
-         </p>
-         <hr>
-         <div class="progress">
-           <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-             <span class="sr-only">40% Complete</span>
-           </div>
+ <div class="col-sm-6 col-md-4" ng-repeat="project in music.allprojects | orderBy:'-created_at'">
+    <a ui-sref="project({id: project.id})" class="thumbnail card">
+       <img class="card-image" ng-src="{{project.image}}" style="width: 340px; height: 255px" alt="card">
+       <h1 class="card-title">{{project.name}}</h1>
+       <h6 class="card-subheader">By {{project.owner.name}} on {{project.created_at}}</h6>
+       <p class="card-txt">
+         {{project.brief_description}}
+       </p>
+       <hr>
+       <div class="more-info">
+         <div class="type pull-left">
+           <span><i class="fa {{project.icon}}" aria-hidden="true"></i> {{project.type}} </span>
          </div>
-      </a>
-   </div>
-   <div class="col-sm-6 col-md-4">
-      <a href="" class="thumbnail card">
-         <img class="card-image" src="images/img.jpeg" style="width: 340px; height: 255px" alt="card">
-         <h1 class="card-title">music Project name</h1>
-         <h6 class="card-subheader">By Radwa Kamal on 26 Mar, 2015</h6>
-         <p class="card-txt">
-           Design better and faster , Ensure your users experience your prototypes ,This Project Intend To Help Designers To Express Thier Projects Visually ..
-         </p>
-         <hr>
-         <div class="progress">
-           <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-             <span class="sr-only">40% Complete</span>
-           </div>
+         <div class="info pull-right">
+           <span><i class="fa fa-bookmark" aria-hidden="true"></i> {{project.enrollments_count}} </i></span>
+           <span><i class="fa fa-users" aria-hidden="true"></i> {{project.contributions_count}} </i></span>
          </div>
-      </a>
-   </div>
+       </div>
+       <div class="progress clearfix">
+         <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{(project.contributions_count/project.goal)*100}}" aria-valuemin="0" aria-valuemax="100" style="width: {{(project.contributions_count/project.goal)*100}}%">
+           <span class="sr-only">{{(project.contributions_count/project.goal)*100}}</span>
+         </div>
+       </div>
+       <div class="remain pull-right">{{(project.contributions_count/project.goal)*100}}% completed</div>
+    </a>
+  </div>
 
 </div>

@@ -520,19 +520,30 @@ margin-left: 55px;
 #linkedin a:hover{color: #00659c;}
 #pinterest a:hover{color: #a30719;}
 
+
+
 .about{
   background-color: #fff;
   margin-top: 50px;
   margin-left: 22px;
-  height: 500px;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 .about-sidbar{
   background-color: #fff;
-  margin-top: 50px;
-  margin-left: 45px;
+  margin-top: 30px;
+  margin-left: 22px;
   height: 500px;
   border-radius: 5px;
+}
+@media(min-width:768px){
+  .about-sidbar{
+    background-color: #fff;
+    margin-top: 50px;
+    margin-left: 45px;
+    height: 500px;
+    border-radius: 5px;
+  }
 }
 .about-header{
   background-color: #4c637b;
@@ -543,6 +554,7 @@ margin-left: 55px;
   margin-left: -15px;
   width: 100%;
 }
+
 .about-header-title{
   margin: 22px 0px 0px 25px;
   font-family: 'Roboto' , sans-serif;
@@ -550,6 +562,62 @@ margin-left: 55px;
   color: #fff;
   font-weight: 600;
   letter-spacing: 1px;
+}
+
+/*------------------ rich text -----------------*/
+.rich-text-div {
+  margin-top: 90px;
+  background-color: #fff;
+  padding:0px 25px 0px 25px;
+  color: #344c67;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  /*overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;*/
+}
+.rich-text-div h1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+.rich-text-div h2{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+.rich-text-div h3{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+.rich-text-div p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+.rich-text-div a {
+  color: #70cbf6;
+}
+.rich-text-div img{
+  width: 100%;
+}
+.rich-text-div iframe{
+  width: 100%;
+  height: 200px;
+}
+@media(min-width:450px) and (max-width:768px){
+  .rich-text-div iframe{
+    width: 100%;
+    height: 300px;
+  }
+}
+@media(min-width:768px) {
+
+  .rich-text-div iframe{
+    height: 400px;
+  }
 }
 
 .section-name{
@@ -677,7 +745,7 @@ margin-left: 55px;
     margin-bottom: 20px;
   }
   .carousel-caption p{
-    font-family: 'roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 30px;
     font-weight: 300;
     font-size: 14px;

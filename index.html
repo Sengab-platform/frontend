@@ -6,9 +6,10 @@
     <!-- css styles -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
-    <link rel='stylesheet' href='bower_components/textAngular/dist/textAngular.css' media="screen" title="no title" charset="utf-8">
     <!-- custome css styles -->
     <link rel="stylesheet" href="styles/main.css" media="screen" title="no title" charset="utf-8">
+      <!-- text-angular css style "keep it last" -->
+    <link rel='stylesheet' href='bower_components/textAngular/dist/textAngular.css' media="screen" title="no title" charset="utf-8">
 
   </head>
   <body ng-app="app">
@@ -162,18 +163,32 @@
   <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"> </script>
   <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"> </script>
-  <script type="text/javascript" src="bower_components/textAngular/dist/textAngular-rangy.min.js"></script>
-  <script type="text/javascript" src="bower_components/textAngular/dist/textAngular-sanitize.min.js"></script>
   <script type="text/javascript" src="bower_components/textAngular/dist/textAngular.min.js"></script>
+  <script type="text/javascript" src="bower_components/textAngular/dist/textAngular-sanitize.min.js"></script>
+  <script type="text/javascript" src="bower_components/textAngular/dist/textAngular-rangy.min.js"></script>
   <script type="text/javascript" src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
   <script type="text/javascript" src="bower_components/ng-file-upload/ng-file-upload-shim.min.js"></script> <!-- for no html5 browsers support -->
+  <script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
   <!-- my scripts -->
   <script type="text/javascript" src="app/app.js"></script>
-  <!-- controllers -->
+  <!-- services -->
   <script type="text/javascript" src="app/services/addproject.service.js"></script>
-  <script type="text/javascript" src="app/add/form.controller.js"></script>
-  <script type="text/javascript" src="app/add/convertimg.controller.js"></script>
-  <script type="text/javascript" src="app/add/survey/addquestions.controller.js"></script>
+  <script type="text/javascript" src="app/services/data.service.js"></script>
+  <!-- controllers -->
+    <!-- categories -->
+  <script type="text/javascript" src="app/categories/art.controller.js"></script>
+  <script type="text/javascript" src="app/categories/biology.controller.js"></script>
+  <script type="text/javascript" src="app/categories/economics.controller.js"></script>
+  <script type="text/javascript" src="app/categories/health.controller.js"></script>
+  <script type="text/javascript" src="app/categories/music.controller.js"></script>
+  <script type="text/javascript" src="app/categories/science.controller.js"></script>
+  <script type="text/javascript" src="app/categories/social.controller.js"></script>
+    <!-- project -->
+  <script type="text/javascript" src="app/project/project.controller.js"></script>
+    <!-- add -->
+  <script type="text/javascript" src="app/addproject/add.controller.js"></script>
+  <script type="text/javascript" src="app/addproject/addquestions.controller.js"></script>
+
 
   <script type="text/javascript">
     // loading the tooltip
