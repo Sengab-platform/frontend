@@ -519,15 +519,54 @@ margin-left: 55px;
 #google a:hover{color: #c2453a;}
 #linkedin a:hover{color: #00659c;}
 #pinterest a:hover{color: #a30719;}
+.gallary{
 
+}
+.gallary-title{
 
-
+}
+.gallary-title h1{
+  font-size: 15px;
+}
+.about-big{
+  background-color: #fff;
+  margin-top: 50px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+}
 .about{
   background-color: #fff;
   margin-top: 50px;
-  margin-left: 22px;
+  margin-left: 0px;
   border-radius: 5px;
   margin-bottom: 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+}
+.results-container{
+  margin-top: 90px;
+}
+@media(min-width:768px){
+  .about{
+    background-color: #fff;
+    margin-top: 50px;
+    margin-left: 22px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+  }
 }
 .about-sidbar{
   background-color: #fff;
@@ -572,11 +611,6 @@ margin-left: 55px;
   color: #344c67;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
-  /*overflow-wrap: break-word;
-  word-wrap: break-word;
-  -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;*/
 }
 .rich-text-div h1{
   font-family: 'Open Sans', sans-serif;

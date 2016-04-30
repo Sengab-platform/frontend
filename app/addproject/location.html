@@ -12,10 +12,10 @@
 </div>
 
 <div class="content">
-  <div ng-switch on="selection">
+  <!-- <div ng-switch on="selection"> -->
 
           <!-- First Step -->
-          <div ng-switch-when="Basic Info">
+          <!-- <div ng-switch-when="Basic Info">
 
             <div class="container">
               <div class="col-sm-8 col-md-8" id="form-container" >
@@ -67,8 +67,8 @@
                         </div>
                         <div class="col-sm-9">
                           <div>
-                            <textarea type="text" rows="6" cols="40" class="form-control basic-input" name="shortBio" required maxlength="135" ng-maxlength ="135" ng-model="projectData.briefDescription"></textarea>
-                            <span class="input-counter-textarea pull-right">{{135 - projectData.briefDescription.length}} / 135</span>
+                            <textarea type="text" rows="6" cols="40" class="form-control basic-input" name="shortBio" required maxlength="135" ng-maxlength ="135" ng-model="projectData.brief_description"></textarea>
+                            <span class="input-counter-textarea pull-right">{{135 - projectData.brief_description.length}} / 135</span>
                           </div>
                           <div class="form-text-helper">
                             This short description is what apears in the project card, try to be specific in describing what you're creating.
@@ -89,7 +89,7 @@
                         <p class="form-label">Category</p>
                       </div>
                       <div class="col-sm-9">
-                        <select required ng-model="projectData.categoryId" name="category">
+                        <select required ng-model="projectData.category_id" name="category">
                             <option  disabled hidden style='display: none' value=''>select a categoty</option>
                             <option  value="1" >Art</option>
                             <option  value="2" >Biology</option>
@@ -115,22 +115,22 @@
                         <input type="number" min="1" class="form-control basic-input" name="goal" required ng-model="projectData.goal">
                       </div>
                     </div>
-                    <div class="form-error col-sm-9 col-sm-offset-3 ">
+                    <div class="form-error col-sm-9 col-sm-offset-3 "> -->
                       <!-- <span class="alert alert-danger form-error" role="alert"  ng-show="basicinfo.goal.$error.required && basicinfo.goal.$touched"> This is a required field </span> -->
                       <!-- <span class="alert alert-danger form-error" role="alert"  ng-show="basicinfo.goal.$error.number ">  Not valid number ! </span> -->
-                      <span class="alert alert-danger form-error" role="alert"  ng-show="basicinfo.goal.$invalid && basicinfo.goal.$touched"> please enter a valid number!</span>
+                      <!-- <span class="alert alert-danger form-error" role="alert"  ng-show="basicinfo.goal.$invalid && basicinfo.goal.$touched"> please enter a valid number!</span>
                     </div>
                   </div>
-                  <button type="button" ng-click="incrementStep()" name="next" ng-disabled="basicinfo.$invalid" class="pull-right btn btn-lg btn-contribute">next step</button>
+                  <button type="button" ng-click="incrementStep();location();createdAt()" name="next" ng-disabled="basicinfo.$invalid" class="pull-right btn btn-lg btn-contribute">next step</button>
                 </form>
 
               </div>
             </div>
 
-          </div>
+          </div> -->
 
           <!-- Second Step -->
-          <div ng-switch-when="Story">
+          <!-- <div ng-switch-when="Story">
             <div class="container">
               <div class="col-sm-8 col-md-8" id="form-container" >
                 <form id="signup-form" name="story">
@@ -142,7 +142,7 @@
                     </div>
 
                     <div class="col-sm-9">
-                      <div text-angular ta-toolbar-class="btn-toolbar rich-text" ta-toolbar-group-class="btn-group rich-text-btns" ta-toolbar-button-class="btn btn-default rich-text-btn" ta-toolbar-button-active-class="active-btn" ta-toolbar="[['h1','h2','h3','p'],['bold','italics','ul','ol'],['insertLink','insertImage','insertVideo']]" ng-model="projectData.htmlStory" required></div>
+                      <div text-angular ta-toolbar-class="btn-toolbar rich-text" ta-toolbar-group-class="btn-group rich-text-btns" ta-toolbar-button-class="btn btn-default rich-text-btn" ta-toolbar-button-active-class="active-btn" ta-toolbar="[['h1','h2','h3','p'],['bold','italics','ul','ol'],['insertLink','insertImage','insertVideo']]" ng-model="projectData.detailed_description" required></div>
                       <div class="form-text-helper">
                         Describe what are you making an why should people contribute in your project, make ever word count :)
                       </div>
@@ -157,10 +157,10 @@
             </div>
           </div>
 
-        </div>
+        </div> -->
 
           <!-- Third Step -->
-          <div ng-switch-when="Assets">
+          <!-- <div ng-switch-when="Assets"> -->
             <div class="container">
               <div class="col-sm-8 col-md-8" id="form-container" >
 
@@ -171,7 +171,7 @@
                           <p class="form-label">Question Title</p>
                         </div>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control basic-input" name="questionTitle" required ng-model="projectData.templateBody.questionTitle">
+                          <input type="text" class="form-control basic-input" name="question_title" required ng-model="projectData.templateBody.question_title">
                           <div class="form-text-helper">
                             this question the contibuters will answer when they add thier location.
                             <br> <span style="font-weight: 300; padding:4px;">Example : "Are you safe at your location?"</span>
@@ -180,8 +180,8 @@
 
                       </div>
                       <div class="form-error col-sm-9 col-sm-offset-3 ">
-                          <span class="alert alert-danger" role="alert" ng-show="assets.questionTitle.$error.required && assets.questionTitle.$touched">Please enter a question</span>
-                      </div>
+                          <span class="alert alert-danger" role="alert" ng-show="assets.question_title.$error.required && assets.question_title.$touched">Please enter a question</span>
+                      </div>question_title
                   </div>
 
                   <div>
@@ -193,4 +193,4 @@
               </div>
             </div>
         </div>
-</div>
+<!-- </div> -->

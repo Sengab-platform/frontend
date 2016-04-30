@@ -3,7 +3,7 @@
     angular.module('app')
         .factory('dataService', ['$http', '$q', '$log', dataService]);
 
-    function dataService($http, $q, $log ) {
+    function dataService($http, $q, $log) {
 
         return {
             getCategoryArt: getCategoryArt,
@@ -13,7 +13,8 @@
             getCategoryMusic: getCategoryMusic,
             getCategoryScience: getCategoryScience,
             getCategorySocial: getCategorySocial,
-            getProject: getProject
+            getProject: getProject,
+            getResult: getResult
         };
 
         function getCategoryArt() {
@@ -99,6 +100,17 @@
                 })
                 .catch(function(response) {
                     $log.error('Error retrieving project (' + id + '): ' + response.statusText);
+                    return $q.reject('Error retrieving data.');
+                })
+        }
+
+        function getResult(id) {
+            return $http.get('http://localhost:9000/projects/'+ id +'/results')
+                .then(function(response) {
+                    return response.data;
+                })
+                .catch(function(response) {
+                    $log.error('Error retrieving project results for project (' + id + '): ' + response.statusText);
                     return $q.reject('Error retrieving data.');
                 })
         }

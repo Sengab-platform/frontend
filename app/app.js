@@ -8,9 +8,14 @@
       $rootScope.$stateParams = $stateParams;
     }])
 
-    app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+    app.config(['$stateProvider', '$urlRouterProvider','$httpProvider', function ($stateProvider, $urlRouterProvider , $httpProvider) {
 
 // -------------------------------- initial states routing --------------------------------
+        $httpProvider.defaults.headers.common = {};
+        $httpProvider.defaults.headers.post = {'Content-Type': 'application/json;'};
+        $httpProvider.defaults.headers.put = {};
+        $httpProvider.defaults.headers.patch = {};
+
         $urlRouterProvider
         .when('/categories', ['$state', function ($state) {
           $state.transitionTo('categories.category_art', {location: false});
@@ -157,7 +162,18 @@
             .state('project.result', {
                 url: '/result',
                 templateUrl: '/app/project/result.html',
+                controller: 'resultController',
+                controllerAs: 'resultCtrl'
             })
+            // ------------------------------ result routing  ------------------------------
+            // .state('project.result.loc', {
+            //     url: '/loc',
+            //     templateUrl: '/app/project/locresult.html',
+            // })
+            // .state('project.result.pic', {
+            //     url: '/pic',
+            //     templateUrl: '/app/project/picresult.html',
+            // })
 // -------------------------------- add routing 4 templates! --------------------------------
             .state('addlocation',{
                 url: '/addlocation',
@@ -165,21 +181,18 @@
                 controller: 'addController',
                 controllerAs: 'addCtrl'
             })
-
             .state('addpics',{
                 url: '/addpics',
                 templateUrl: '/app/addproject/pics.html',
                 controller: 'addController',
                 controllerAs: 'addCtrl'
             })
-
             .state('addsurvey',{
                 url: '/addsurvey',
                 templateUrl: '/app/addproject/survey.html',
                 controller: 'addController',
                 controllerAs: 'addCtrl'
             })
-
             .state('addlocpic',{
                 url: '/addlocpic',
                 templateUrl: '/app/addproject/locpic.html',
