@@ -4,7 +4,7 @@
     <a ui-sref="project({id: project.id})" class="thumbnail card">
        <img class="card-image" ng-src="{{project.image}}" style="width: 340px; height: 255px" alt="card">
        <h1 class="card-title">{{project.name}}</h1>
-       <h6 class="card-subheader">By {{project.owner.name}} on {{project.created_at}}</h6>
+       <h6 class="card-subheader">By {{project.owner.name}} on {{project.created_at | date : "fullDate" }}</h6>
        <p class="card-txt">
          {{project.brief_description}}
        </p>

@@ -8,13 +8,9 @@
       $rootScope.$stateParams = $stateParams;
     }])
 
-    app.config(['$stateProvider', '$urlRouterProvider','$httpProvider', function ($stateProvider, $urlRouterProvider , $httpProvider) {
+    app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
 // -------------------------------- initial states routing --------------------------------
-        $httpProvider.defaults.headers.common = {};
-        $httpProvider.defaults.headers.post = {'Content-Type': 'application/json;'};
-        $httpProvider.defaults.headers.put = {};
-        $httpProvider.defaults.headers.patch = {};
 
         $urlRouterProvider
         .when('/categories', ['$state', function ($state) {

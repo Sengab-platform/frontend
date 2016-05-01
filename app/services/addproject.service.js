@@ -7,7 +7,7 @@
   function addProjectService () {
     //this service hold the data to be avaliable to the multistep form
     this.projectData={};
-    this.projectData.templateBody ={};
+    this.projectData.template_body ={};
 
     console.log(this.projectData);
   }

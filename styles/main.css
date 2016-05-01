@@ -981,3 +981,18 @@ font-family: 'Roboto', sans-serif;
 font-weight: 500;
 color:#344c67;
 }
+#successModal h2,h4{
+  padding-top: 10px;
+  color: #344c67;
+}
+.btn-successModal{
+  color: #fff;
+  background-color:#e74c3e;
+  margin: 10px 0px 0px 0px;
+}
+.btn-successModal:hover{
+  transition: all 0.2s ease;
+  color: #fff;
+  background-color:#df483a;
+  margin: 10px 0px 0px 0px;
+}

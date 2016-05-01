@@ -12,10 +12,10 @@
 </div>
 
 <div class="content">
-  <!-- <div ng-switch on="selection"> -->
+  <div ng-switch on="selection">
 
           <!-- First Step -->
-          <!-- <div ng-switch-when="Basic Info">
+          <div ng-switch-when="Basic Info">
 
             <div class="container">
               <div class="col-sm-8 col-md-8" id="form-container" >
@@ -29,8 +29,8 @@
                       </div>
                       <div class="col-sm-9">
 
-                        <div class="project-img-container" ngf-drop ngf-select required ng-model="projectData.mainImage" ngf-change="getBase64($file)" name="image" ngf-pattern="'image/*'"   ngf-accept="'image/*'" ngf-max-size="10MB">
-                          <img class="col-sm-12 container-fluid project-img" ngf-src="projectData.mainImage" alt="project image"/>
+                        <div class="project-img-container" ngf-drop ngf-select required ng-model="mainImage" ngf-change="getBase64($file)" name="image" ngf-pattern="'image/*'"   ngf-accept="'image/*'" ngf-max-size="10MB">
+                          <img class="col-sm-12 container-fluid project-img" ngf-src="mainImage" alt="project image"/>
                         </div>
 
                         <div>
@@ -91,13 +91,13 @@
                       <div class="col-sm-9">
                         <select required ng-model="projectData.category_id" name="category">
                             <option  disabled hidden style='display: none' value=''>select a categoty</option>
-                            <option  value="1" >Art</option>
-                            <option  value="2" >Biology</option>
-                            <option  value="3" >Economics</option>
-                            <option  value="4" >Health</option>
-                            <option  value="5" >Music</option>
-                            <option  value="6" >Science</option>
-                            <option  value="7" >Social</option>
+                            <option  value="category::1" >Art</option>
+                            <option  value="category::2" >Biology</option>
+                            <option  value="category::3" >Economics</option>
+                            <option  value="category::4" >Health</option>
+                            <option  value="category::5" >Music</option>
+                            <option  value="category::6" >Science</option>
+                            <option  value="category::7" >Social</option>
                         </select>
                       </div>
                     </div>
@@ -115,10 +115,8 @@
                         <input type="number" min="1" class="form-control basic-input" name="goal" required ng-model="projectData.goal">
                       </div>
                     </div>
-                    <div class="form-error col-sm-9 col-sm-offset-3 "> -->
-                      <!-- <span class="alert alert-danger form-error" role="alert"  ng-show="basicinfo.goal.$error.required && basicinfo.goal.$touched"> This is a required field </span> -->
-                      <!-- <span class="alert alert-danger form-error" role="alert"  ng-show="basicinfo.goal.$error.number ">  Not valid number ! </span> -->
-                      <!-- <span class="alert alert-danger form-error" role="alert"  ng-show="basicinfo.goal.$invalid && basicinfo.goal.$touched"> please enter a valid number!</span>
+                    <div class="form-error col-sm-9 col-sm-offset-3 ">
+                      <span class="alert alert-danger form-error" role="alert"  ng-show="basicinfo.goal.$invalid && basicinfo.goal.$touched"> please enter a valid number!</span>
                     </div>
                   </div>
                   <button type="button" ng-click="incrementStep();location();createdAt()" name="next" ng-disabled="basicinfo.$invalid" class="pull-right btn btn-lg btn-contribute">next step</button>
@@ -127,10 +125,10 @@
               </div>
             </div>
 
-          </div> -->
+          </div>
 
           <!-- Second Step -->
-          <!-- <div ng-switch-when="Story">
+          <div ng-switch-when="Story">
             <div class="container">
               <div class="col-sm-8 col-md-8" id="form-container" >
                 <form id="signup-form" name="story">
@@ -157,10 +155,10 @@
             </div>
           </div>
 
-        </div> -->
+        </div>
 
           <!-- Third Step -->
-          <!-- <div ng-switch-when="Assets"> -->
+          <div ng-switch-when="Assets">
             <div class="container">
               <div class="col-sm-8 col-md-8" id="form-container" >
 
@@ -171,7 +169,7 @@
                           <p class="form-label">Question Title</p>
                         </div>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control basic-input" name="question_title" required ng-model="projectData.templateBody.question_title">
+                          <input type="text" class="form-control basic-input" name="questionTitle" required ng-model="projectData.template_body.question_title">
                           <div class="form-text-helper">
                             this question the contibuters will answer when they add thier location.
                             <br> <span style="font-weight: 300; padding:4px;">Example : "Are you safe at your location?"</span>
@@ -180,8 +178,8 @@
 
                       </div>
                       <div class="form-error col-sm-9 col-sm-offset-3 ">
-                          <span class="alert alert-danger" role="alert" ng-show="assets.question_title.$error.required && assets.question_title.$touched">Please enter a question</span>
-                      </div>question_title
+                          <span class="alert alert-danger" role="alert" ng-show="assets.questionTitle.$error.required && assets.questionTitle.$touched">Please enter a question</span>
+                      </div>
                   </div>
 
                   <div>
@@ -193,4 +191,21 @@
               </div>
             </div>
         </div>
-<!-- </div> -->
+</div>
+      <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog " role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button ng-click="goHome()" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="../../../images/completed.png" alt="success" />
+              <h2>Awesome!</h2><h4>you project has been successfully submitted</h4>
+            </div>
+            <div class="modal-footer">
+              <button ng-click="goHome()" type="button" class="btn btn-lg btn-successModal" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

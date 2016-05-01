@@ -29,8 +29,8 @@
                       </div>
                       <div class="col-sm-9">
 
-                        <div class="project-img-container" ngf-drop ngf-select required ng-model="projectData.mainImage" ngf-change="getBase64($file)" name="image" ngf-pattern="'image/*'"   ngf-accept="'image/*'" ngf-max-size="10MB">
-                          <img class="col-sm-12 container-fluid project-img" ngf-src="projectData.mainImage" alt="project image"/>
+                        <div class="project-img-container" ngf-drop ngf-select required ng-model="mainImage" ngf-change="getBase64($file)" name="image" ngf-pattern="'image/*'"   ngf-accept="'image/*'" ngf-max-size="10MB">
+                          <img class="col-sm-12 container-fluid project-img" ngf-src="mainImage" alt="project image"/>
                         </div>
 
                         <div>
@@ -91,13 +91,13 @@
                       <div class="col-sm-9">
                         <select required ng-model="projectData.category_id" name="category">
                             <option  disabled hidden style='display: none' value=''>select a categoty</option>
-                            <option  value="1" >Art</option>
-                            <option  value="2" >Biology</option>
-                            <option  value="3" >Economics</option>
-                            <option  value="4" >Health</option>
-                            <option  value="5" >Music</option>
-                            <option  value="6" >Science</option>
-                            <option  value="7" >Social</option>
+                            <option  value="category::1" >Art</option>
+                            <option  value="category::2" >Biology</option>
+                            <option  value="category::3" >Economics</option>
+                            <option  value="category::4" >Health</option>
+                            <option  value="category::5" >Music</option>
+                            <option  value="category::6" >Science</option>
+                            <option  value="category::7" >Social</option>
                         </select>
                       </div>
                     </div>
@@ -170,7 +170,7 @@
                           <p class="form-label">Image Title</p>
                         </div>
                         <div class="col-sm-9">
-                          <input type="text" class="form-control basic-input" name="imageTitle" required ng-model="projectData.templateBody.imageTitle">
+                          <input type="text" class="form-control basic-input" name="imageTitle" required ng-model="projectData.template_body.image_title">
                           <div class="form-text-helper">
                             What image you need from the contibuters?
                             <br> <span style="font-weight: 300; padding:4px;">Example : "Take a photo of your pet."</span>
