@@ -13,6 +13,9 @@
 // -------------------------------- initial states routing --------------------------------
 
         $urlRouterProvider
+        .when('/me', ['$state', function ($state) {
+          $state.transitionTo('profile.about', {location: false});
+        }])
         .when('/categories', ['$state', function ($state) {
           $state.transitionTo('categories.category_art', {location: false});
         }])
@@ -31,7 +34,34 @@
                 url: '/',
                 templateUrl: '/app/home/home.html'
             })
+// -------------------------------- profile routing --------------------------
+            .state('profile', {
+                url: '/me',
+                templateUrl: '/app/profile/profile.html',
+                controller: 'profileController',
+                controllerAs: 'profileCtrl'
+            })
+            .state('profile.about', {
+                url: '/about',
+                templateUrl: '/app/profile/about.html',
+                controller: 'profileController',
+                controllerAs: 'profileCtrl'
+            })
+            .state('profile.projects', {
+                url: '/projects',
+                templateUrl: '/app/profile/projects.html',
+                controller: 'userProjectsController',
+                controllerAs: 'userProjectsCtrl'
+            })
+            .state('profile.activity', {
+                url: '/activity',
+                templateUrl: '/app/profile/activity.html',
+                controller: 'activityController',
+                controllerAs: 'activityCtrl'
+            })
+
 // -------------------------------- categories routing --------------------------
+
             .state('categories', {
                 url: '/categories',
                 templateUrl: '/app/categories/categories.html'
@@ -139,7 +169,6 @@
                         subtitle: "Here you find the projects you created that has been finished.",
                         img:'completed'}
             })
-
 // -------------------------------- project routing --------------------------------
             .state('project',{
                 url: '/project/:id',

@@ -37,11 +37,11 @@
         </form>
         <ul class="nav navbar-right pull-right top-nav">
             <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-circle" src="images/me.jpg" alt="" style="width:40px;"/> Hi, Hassan <b class="caret"></b></a>
+                <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-circle" src="images/me.png" alt="" style="width:40px;"/> Hi, Hassan <b class="caret"></b></a>
                 <!-- profile dropdown -->
                 <ul class="dropdown-menu">
                     <li>
-                        <a href=""><i class="fa fa-fw fa-user"></i> profile</a>
+                        <a ui-sref="profile"><i class="fa fa-fw fa-user"></i> profile</a>
                     </li>
                     <li>
                         <a href=""><i class="fa fa-fw fa-gear"></i> settings</a>
@@ -60,24 +60,24 @@
               <div class="logo">
                 <a class="navbar-brand" ui-sref="home"><img alt="sengab" src="images/logo.png" style="width:50px;"></a>
               </div>
-                <li data-toggle="tooltip" data-placement="right"  title="categories">
+                <li data-toggle="tooltip" data-placement="right"  title="categories" class="blue-tooltip">
                     <a ui-sref-active="active" ui-sref="categories"><i class="fa fa-th-large"></i> </a>
                 </li>
 
 
-                  <li data-toggle="tooltip" data-placement="right" title="add project">
+                  <li data-toggle="tooltip" data-placement="right" title="add project" class="blue-tooltip">
                       <a data-toggle="modal" data-target="#add-modal" ui-sref-active="active" ui-sref="add"><i class="fa fa-plus-circle" style="padding-right:2px; padding-left:1px;" ></i></a>
                   </li>
 
 
-                <li data-toggle="tooltip" data-placement="right"  title="enrolled projects">
+                <li data-toggle="tooltip" data-placement="right"  title="enrolled projects" class="blue-tooltip">
                     <a ui-sref-active="active" ui-sref="enrolled"><i class="fa fa-bookmark" style="padding-right:2px; padding-left:3px;"></i></a>
                 </li>
 
-                <li data-toggle="tooltip" data-placement="right"  title="my projects">
+                <li data-toggle="tooltip" data-placement="right"  title="my projects" class="blue-tooltip">
                     <a ui-sref-active="active" ui-sref="myprojects"><i class="fa fa-list-alt" ></i> </a>
                 </li>
-                <li data-toggle="tooltip" data-placement="right"  title="friends">
+                <li data-toggle="tooltip" data-placement="right"  title="friends" class="blue-tooltip">
                     <a ui-sref-active="active" ui-sref="friends"><i class="fa fa-users"></i></a>
                 </li>
 
@@ -175,6 +175,10 @@
   <script type="text/javascript" src="app/services/addproject.service.js"></script>
   <script type="text/javascript" src="app/services/data.service.js"></script>
   <!-- controllers -->
+    <!-- profile -->
+  <script type="text/javascript" src="app/profile/profile.controller.js"></script>
+  <script type="text/javascript" src="app/profile/Projects.controller.js"></script>
+  <script type="text/javascript" src="app/profile/activity.controller.js"></script>
     <!-- categories -->
   <script type="text/javascript" src="app/categories/art.controller.js"></script>
   <script type="text/javascript" src="app/categories/biology.controller.js"></script>

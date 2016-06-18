@@ -6,6 +6,8 @@
     function dataService($http, $q, $log) {
 
         return {
+            getUser: getUser,
+            getUserProjects: getUserProjects,
             getCategoryArt: getCategoryArt,
             getCategoryBiology: getCategoryBiology,
             getCategoryEconomics: getCategoryEconomics,
@@ -16,6 +18,30 @@
             getProject: getProject,
             getResult: getResult
         };
+
+        // temporary still didn't implement the authentcation to the server
+
+        function getUser() {
+            return $http.get('http://localhost:9000/users/user::117521628211683444029')
+                .then(function(response) {
+                    return response.data;
+                })
+                .catch(function(response) {
+                    $log.error('Error retrieving data: ' + response.statusText);
+                    return $q.reject('Error retrieving data.');
+                })
+        }
+
+        function getUserProjects() {
+            return $http.get('http://localhost:9000/users/user::117521628211683444029/created_projects')
+                .then(function(response) {
+                    return response.data;
+                })
+                .catch(function(response) {
+                    $log.error('Error retrieving projects of the user : ' + response.statusText);
+                    return $q.reject('Error retrieving data.');
+                })
+        }
 
         function getCategoryArt() {
             return $http.get('http://localhost:9000/categories/category::1')

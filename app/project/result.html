@@ -13,15 +13,15 @@
           <div class="results-container">
 
           </div>
-            <div class="col-md-4" ng-repeat="result in resultCtrl.results.results">
-              <a href="{{result.image_url}}" target="_blank">
-                <div class="thumbnail card">
-                  <img src="{{result.image_url}}" alt="{{result.caption}}" />
-                  <h1 class="card-title">{{result.caption}}</h1>
-                </div>
-              </a>
-            </div>
+          <div class="col-md-4" ng-repeat="result in resultCtrl.results.results">
+            <a href="{{result.image}}" target="_blank">
+              <div class="thumbnail card">
+                <img ng-src="{{result.image}}" alt="{{result.caption}}" />
+                <h1 class="card-title">{{result.caption}}</h1>
+              </div>
+            </a>
           </div>
+      </div>
       <!-- survey template -->
       <div ng-switch-when="3">
           <div class="">333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333</div>
@@ -38,7 +38,7 @@
   <div class="col-xs-12 col-sm-12 col-md-3 about-sidbar">
     <div class="about-header"><h4 class="about-header-title">help</h4></div>
     <p style="margin-top:90px;">
-      You can download this data from <a href="#">this link</a> or 
+      You can download this data from <a href="#">this link</a> or
       if you'r a developer and need this data in your project.<br>
       you can use our API <a href="#"> here </a> or download it as a <a href="#"> JSON file </a>
     </p>
