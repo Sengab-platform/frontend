@@ -1070,14 +1070,18 @@ color:#344c67;
   outline: none
 }
 .search-input input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
   color: #99aabc;
 }
 .search-input input::-moz-placeholder { /* Firefox 19+ */
+  font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
   color: #99aabc;
 }
 .search-input input:-ms-input-placeholder { /* IE 10+ */
+  font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
   color: #99aabc;
 }
 .search-input input:-moz-placeholder { /* Firefox 18- */
+  font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
   color: #99aabc;
 }
