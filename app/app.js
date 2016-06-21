@@ -25,6 +25,9 @@
         .when('/myprojects', ['$state', function ($state) {
           $state.transitionTo('myprojects.inprogress', {location: false});
         }])
+        .when('/search', ['$state', function ($state) {
+          $state.transitionTo('search.projects', {location: false});
+        }])
         .when('/project/:id', '/project/:id/campaign')
         .otherwise('/');
 
@@ -35,7 +38,21 @@
                 templateUrl: '/app/home/home.html'
             })
 // -------------------------------- profile routing --------------------------
-            .state('profile', {
+        .state('search', {
+          url: '/search',
+          templateUrl: '/app/search/search.html',
+          controller: 'searchController',
+          controllerAs: 'searchCtrl'
+        })
+        .state('search.projects', {
+          url: '/projects',
+          templateUrl: '/app/search/projects.html',
+          controller: 'searchController',
+          controllerAs: 'searchCtrl'
+        })
+
+// -------------------------------- search routing  --------------------------
+          .state('profile', {
                 url: '/me',
                 templateUrl: '/app/profile/profile.html',
                 controller: 'profileController',

@@ -4,7 +4,7 @@
         .factory('dataService', ['$http', '$q', '$log', dataService]);
 
     function dataService($http, $q, $log) {
-
+        this.key = '';
         return {
             getUser: getUser,
             getUserProjects: getUserProjects,
@@ -16,9 +16,9 @@
             getCategoryScience: getCategoryScience,
             getCategorySocial: getCategorySocial,
             getProject: getProject,
-            getResult: getResult
+            getResult: getResult,
+            getSearchProjects: getSearchProjects
         };
-
         // temporary still didn't implement the authentcation to the server
 
         function getUser() {
@@ -137,6 +137,26 @@
                 })
                 .catch(function(response) {
                     $log.error('Error retrieving project results for project (' + id + '): ' + response.statusText);
+                    return $q.reject('Error retrieving data.');
+                })
+        }
+        // function getSearchProjects(keyword) {
+        //     return $http.get('http://localhost:9000/projects/search/'+ keyword)
+        //         .then(function(response) {
+        //             return response.data;
+        //         })
+        //         .catch(function(response) {
+        //             $log.error('Error retrieving projects for the keyword (' + keyword + '): ' + response.statusText);
+        //             return $q.reject('Error retrieving data.');
+        //         })
+        // }
+        function getSearchProjects() {
+            return $http.get('http://localhost:9000/projects')
+                .then(function(response) {
+                    return response.data;
+                })
+                .catch(function(response) {
+                    $log.error('Error retrieving projects for the keyword (): ' + response.statusText);
                     return $q.reject('Error retrieving data.');
                 })
         }

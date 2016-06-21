@@ -57,10 +57,10 @@
 
         </div>
         <!-- Top Menu Items -->
-        <form class="navbar-form navbar-left pull-left" role="search">
-        <div class="form-group search-nav">
-          <input type="text" class="form-control search-input" placeholder="Search..">
-        </div>
+        <form class="navbar-form navbar-left pull-left" role="search" ng-submit="search()" ng-controller="searchController">
+          <div class="form-group search-nav">
+            <input ng-model="searchText" type="search" class="form-control search-input" placeholder="Search..">
+          </div>
         </form>
         <ul class="nav navbar-right pull-right top-nav">
             <li class="dropdown">
@@ -104,8 +104,8 @@
                 <li data-toggle="tooltip" data-placement="right"  title="my projects" class="blue-tooltip">
                     <a ui-sref-active="active" ui-sref="myprojects"><i class="fa fa-list-alt" ></i> </a>
                 </li>
-                <li data-toggle="tooltip" data-placement="right"  title="friends" class="blue-tooltip">
-                    <a ui-sref-active="active" ui-sref="friends"><i class="fa fa-users"></i></a>
+                <li data-toggle="tooltip" data-placement="right"  title="search" class="blue-tooltip">
+                    <a ui-sref-active="active" ui-sref="search"><i class="fa fa-search" aria-hidden="true"></i></i></a>
                 </li>
 
             </ul>
@@ -217,6 +217,9 @@
     <!-- project -->
   <script type="text/javascript" src="app/project/project.controller.js"></script>
   <script type="text/javascript" src="app/project/result.controller.js"></script>
+    <!-- search -->
+  <script type="text/javascript" src="app/search/search.controller.js"></script>
+
     <!-- add -->
   <script type="text/javascript" src="app/addproject/add.controller.js"></script>
   <script type="text/javascript" src="app/addproject/addquestions.controller.js"></script>
