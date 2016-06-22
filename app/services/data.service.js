@@ -7,6 +7,8 @@
         return {
             getUser: getUser,
             getUserProjects: getUserProjects,
+            // getUserContributions: getUserContributions,
+            getUserEnrollments: getUserEnrollments,
             getAllProjects: getAllProjects,
             getCategoryArt: getCategoryArt,
             getCategoryBiology: getCategoryBiology,
@@ -34,6 +36,28 @@
 
         function getUserProjects() {
             return $http.get('http://localhost:9000/users/user::117521628211683444029/created_projects')
+                .then(function(response) {
+                    return response.data;
+                })
+                .catch(function(response) {
+                    $log.error('Error retrieving projects of the user : ' + response.statusText);
+                    return $q.reject('Error retrieving data.');
+                })
+        }
+
+        // function getUserContributions() {
+        //     return $http.get('http://localhost:9000/users/user::117521628211683444029/activities')
+        //         .then(function(response) {
+        //             return response.data;
+        //         })
+        //         .catch(function(response) {
+        //             $log.error('Error retrieving projects of the user : ' + response.statusText);
+        //             return $q.reject('Error retrieving data.');
+        //         })
+        // }
+
+        function getUserEnrollments() {
+            return $http.get('http://localhost:9000/users/user::117521628211683444029/enrolled_projects')
                 .then(function(response) {
                     return response.data;
                 })

@@ -156,6 +156,8 @@
             .state('enrolled.inprogress', {
                 url: '/inprogress',
                 templateUrl: '/app/enrolled/inprogress.html',
+                controller: 'enrolledController',
+                controllerAs: 'enrolledCtrl',
                 data : { title: 'Enrolled projects' ,
                         subtitle: "Here you find the projects you enrolled that hasn't been finished.",
                         img:'enrolled'}
@@ -163,6 +165,8 @@
             .state('enrolled.completed', {
                 url: '/completed',
                 templateUrl: '/app/enrolled/completed.html',
+                controller: 'enrolledController',
+                controllerAs: 'enrolledCtrl',
                 data : { title: 'Enrolled projects' ,
                         subtitle: "Here you find the projects you enrolled that has been finished.",
                         img:'completed'}
@@ -175,6 +179,8 @@
             .state('myprojects.inprogress', {
                 url: '/inprogress',
                 templateUrl: '/app/myprojects/inprogress.html',
+                controller: 'myProjectsController',
+                controllerAs: 'myProjectsCtrl',
                 data : { title: 'My projects' ,
                         subtitle: "Here you find the projects you created that hasn't been finished.",
                         img:'myprojects'}
@@ -182,6 +188,8 @@
             .state('myprojects.completed', {
                 url: '/completed',
                 templateUrl: '/app/myprojects/completed.html',
+                controller: 'myProjectsController',
+                controllerAs: 'myProjectsCtrl',
                 data : { title: 'My projects' ,
                         subtitle: "Here you find the projects you created that has been finished.",
                         img:'completed'}
