@@ -1,4 +1,4 @@
-# frontend for sengab platform
+# Frontend for sengab platform
 
 The Web app for sengab **still under development**.
 This is built in angularjs v1.5.3.
