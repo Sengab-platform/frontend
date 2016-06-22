@@ -1,9 +1,29 @@
 <div class="container">
     <div class="col-xs-12 col-sm-12 col-md-8 about">
-      <div class="about-header"><h4 class="about-header-title">Stats</h4></div>
-      <div class="">  </div>
+      <div class="about-header"><h4 class="about-header-title">Contribution Rate</h4></div>
+      
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3 about-sidbar">
-      <div class="about-header"><h4 class="about-header-title">help</h4></div>
+      <div class="about-header"><h4 class="about-header-title">Who Contributed</h4></div>
+        <div class="gender">
+          <div class="row">
+            <div class="col-sm-6">
+              <img id="male" src="images/male.png" alt="male" />
+            </div>
+            <div class="col-sm-6">
+              <img id="female" src="images/female.png" alt="female" />
+            </div>
+          </div>
+          <div class="row gender-text">
+            <div class="col-sm-6 text-center">
+              <p>{{statsCtrl.stats.contributors_gender.male}} male </p>
+            </div>
+            <div class="col-sm-6 text-center">
+              <p>{{statsCtrl.stats.contributors_gender.female}} female </p>
+            </div>
+          </div>
+        </div>
+        <hr>
+
     </div>
 </div>

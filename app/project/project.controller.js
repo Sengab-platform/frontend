@@ -9,6 +9,7 @@
         var fetched = dataService.getProject($stateParams.id)
             .then(function(data) {
                 vm.project = data;
+                console.log(vm.project);
             })
             .catch(function(message) {
                 console.log(message);

@@ -459,6 +459,8 @@ padding: 5px;
 .close:hover{
   color: red;
 }
+
+/*--------------- project campaign ------------*/
 .enroll-btns{
 margin-top: 70px;
 margin-left: 55px;
@@ -601,14 +603,57 @@ margin-left: 55px;
 }
 
 .about-header-title{
-  margin: 22px 0px 0px 25px;
+  margin: 15px 0px 0px 25px;
   font-family: 'Roboto' , sans-serif;
   font-size: 16px;
   color: #fff;
   font-weight: 600;
   letter-spacing: 1px;
 }
-
+.owner-sidbar{
+  background-color: #fff;
+  margin-top: 40px;
+  margin-left: 22px;
+  height: 90px;
+  border-radius: 5px;
+}
+@media(min-width:768px){
+  .owner-sidbar{
+    background-color: #fff;
+    margin-top: 40px;
+    margin-left: 45px;
+    height: 90px;
+    border-radius: 5px;
+  }
+}
+.owner-sidbar img{
+  margin-top: 12px;
+}
+.owner-sidbar h4{
+  margin-top: 25px;
+  font-weight: 400;
+}
+.project-sidbar{
+  color: #99aabc;
+  font-size: 15px;
+  background-color: #fff;
+  margin-top: 30px;
+  margin-left: 22px;
+  height: 90px;
+  border-radius: 5px;
+}
+.project-sidbar-info{
+  margin-top: 12px;
+}
+@media(min-width:768px){
+  .project-sidbar{
+    background-color: #fff;
+    margin-top: 50px;
+    margin-left: 45px;
+    height: 90px;
+    border-radius: 5px;
+  }
+}
 /*------------------ rich text -----------------*/
 .rich-text-div {
   margin-top: 90px;
@@ -1070,18 +1115,39 @@ color:#344c67;
   outline: none
 }
 .search-input input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+  font-family: FontAwesome, "Open Sans", sans-serif;
   color: #99aabc;
 }
 .search-input input::-moz-placeholder { /* Firefox 19+ */
-  font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+  font-family: FontAwesome, "Open Sans", sans-serif;
   color: #99aabc;
 }
 .search-input input:-ms-input-placeholder { /* IE 10+ */
-  font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+  font-family: FontAwesome, "Open Sans", sans-serif;
   color: #99aabc;
 }
 .search-input input:-moz-placeholder { /* Firefox 18- */
-  font-family: FontAwesome, "Open Sans", Verdana, sans-serif;
+  font-family: FontAwesome, "Open Sans", sans-serif;
   color: #99aabc;
+}
+/*---------------- stats --------------*/
+.gender{
+  margin-top: 80px;
+}
+#male{
+  padding: 10px 0 0 16px;
+  width: 110px;
+  height: auto;
+}
+#female{
+  margin-left: 18px;
+  width: 75px;
+  height: auto;
+}
+.gender-text{
+  margin-top: 10px;
+}
+.gender-text p{
+  color: #344c67;
+  font-size: 14px;
 }

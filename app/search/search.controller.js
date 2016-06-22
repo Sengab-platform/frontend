@@ -7,7 +7,7 @@
 
         var vm = this;
 
-        dataService.getSearchProjects()
+        dataService.getAllProjects()
             .then(function(projects) {
                 vm.allprojects = projects;
             })

@@ -200,6 +200,8 @@
             .state('project.stats', {
                 url: '/stats',
                 templateUrl: '/app/project/stats.html',
+                controller: 'statsController',
+                controllerAs: 'statsCtrl'
             })
             .state('project.result', {
                 url: '/result',
@@ -207,15 +209,7 @@
                 controller: 'resultController',
                 controllerAs: 'resultCtrl'
             })
-            // ------------------------------ result routing  ------------------------------
-            // .state('project.result.loc', {
-            //     url: '/loc',
-            //     templateUrl: '/app/project/locresult.html',
-            // })
-            // .state('project.result.pic', {
-            //     url: '/pic',
-            //     templateUrl: '/app/project/picresult.html',
-            // })
+
 // -------------------------------- add routing 4 templates! --------------------------------
             .state('addlocation',{
                 url: '/addlocation',
