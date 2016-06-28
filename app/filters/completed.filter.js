@@ -1,20 +1,20 @@
 (function () {
 
     angular.module('app')
-        .filter('completedFilter', [completedFilter]);
+        .filter('completedFilter', function() {
+          return function(projects ,filterProjects) {
 
-    function completedFilter() {
+            var completedProjects = [];
+            // console.log(completedProjects);
+            angular.forEach(projects, function(project) {
+                var goal = project.goal;
+                var contributionsCount = project.contributions_count ;
+                if (goal == contributionsCount) {
+                  completedProjects.push(project);
+                }
 
-// TODO:
-// not working check http://stackoverflow.com/questions/13364091/angularjs-custom-filter-errors-due-to-undefined-arrays-and-still-filters-prope
-
-      return function(project) {
-        goal = project.goal;
-        contributionsCount = project.contributions_count;
-        if (goal === contributionsCount) {
-          return project;
+            });
+            return completedProjects;
         }
-
-      }
-    }
+      });
 }());

@@ -10,7 +10,6 @@
         dataService.getUserEnrollments()
             .then(function(projects) {
                 vm.allprojects = projects;
-                console.log(vm.allprojects);
             })
             .catch(function(message) {
                 console.log(message);

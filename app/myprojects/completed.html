@@ -1,5 +1,5 @@
 <div class="container cards">
- <div class="col-sm-6 col-md-4" ng-repeat="project in myProjectsCtrl.allprojects">
+ <div class="col-sm-6 col-md-4" ng-repeat="project in completedProjects = ( myProjectsCtrl.allprojects | completedFilter)">
     <a ui-sref="project({id: project.id})" class="thumbnail card">
        <img class="card-image" ng-src="data:image/png;base64,{{project.image}}" style="width: 340px; height: 255px" alt="card">
        <h1 class="card-title">{{project.name}}</h1>

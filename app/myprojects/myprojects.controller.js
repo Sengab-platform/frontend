@@ -10,7 +10,7 @@
         dataService.getUserProjects()
             .then(function(projects) {
                 vm.allprojects = projects;
-                console.log(vm.allprojects);
+                // console.log(vm.allprojects);
             })
             .catch(function(message) {
                 console.log(message);
