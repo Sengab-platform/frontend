@@ -81,9 +81,9 @@
           var dataUrl = e.target.result;
           var base64Data = dataUrl.substr(dataUrl.indexOf('base64,') + 'base64,'.length);
           // addProjectService.projectData.mainImage.base64 = base64Data;
-          $scope.projectData.image = "base64Data";
+          // $scope.projectData.image = "base64Data";
 
-          //addProjectService.projectData.image = base64Data;
+          addProjectService.projectData.image = base64Data;
           // addProjectService.projectData.image = 'data:'+addProjectService.projectData.mainImage.type+';base64,'+base64Data;
         };
       };
@@ -101,7 +101,7 @@
         // http post request
         var postData = addProjectService.projectData ;
         var jdata= angular.toJson(postData);
-        console.info(jdata);
+        // console.info(jdata);
 
         $http({
           url: 'http://127.0.0.1:9000/projects',

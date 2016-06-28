@@ -2,7 +2,7 @@
 
  <div class="col-sm-6 col-md-4" ng-repeat="project in health.allprojects | orderBy:'-created_at'">
     <a ui-sref="project({id: project.id})" class="thumbnail card">
-       <img class="card-image" ng-src="{{project.image}}" style="width: 340px; height: 255px" alt="card">
+       <img class="card-image" ng-src="data:image/png;base64,{{project.image}}" style="width: 340px; height: 255px" alt="card">
        <h1 class="card-title">{{project.name}}</h1>
        <h6 class="card-subheader">By {{project.owner.name}} on {{project.created_at | date : "fullDate" }}</h6>
        <p class="card-txt">
