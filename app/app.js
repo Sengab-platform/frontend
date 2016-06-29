@@ -37,7 +37,7 @@
                 url: '/',
                 templateUrl: '/app/home/home.html'
             })
-// -------------------------------- profile routing --------------------------
+// -------------------------------- search routing --------------------------
         .state('search', {
           url: '/search',
           templateUrl: '/app/search/search.html',
@@ -51,7 +51,7 @@
           controllerAs: 'searchCtrl'
         })
 
-// -------------------------------- search routing  --------------------------
+// -------------------------------- profile routing  --------------------------
           .state('profile', {
                 url: '/me',
                 templateUrl: '/app/profile/profile.html',
@@ -135,7 +135,7 @@
                 controller: 'scienceController',
                 controllerAs: 'science',
                 data : { title: 'Science' ,
-                        subtitle: 'Here you can find projects related to science & technology Here you can find projects related to science & technology Here you can find projects related to science & technology Here you can find projects related to science & technology Here you can find projects related to science & technology Here you can sadaaad',
+                        subtitle: 'Here you can find projects related to science & technology.',
                         img:'science'}
             })
             .state('categories.category_social', {

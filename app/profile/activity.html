@@ -1,10 +1,33 @@
 <div class="container">
     <div class="col-xs-12 col-sm-12 col-md-8 about">
       <div class="about-header"><h4 class="about-header-title">Contributions</h4></div>
+      <div class="vertical-line">
 
+        <div ng-repeat="activity in activityCtrl.activities  | orderBy:'-created_at'">
+          <div class="activity-row">
+            <div class="activity-circle"></div>
+            <p>
+               <span style="font-weight:600"> {{userName}}</span> made a <span style="font-weight:600">  {{activity.activity_type}} </span> to <a ui-sref="project({id: activity.project.id})"> <span style="font-weight:600"> {{activity.project.name}} </span></a> in {{activity.created_at | date:"EEEE, MMMM d 'at' h:mma"}}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-3 about-sidbar">
       <div class="about-header"><h4 class="about-header-title">Enrollments</h4></div>
+      <div class="enrollments">
+        <div ng-repeat="enrollment in activityCtrl.enrollments  | orderBy:'-created_at'">
 
+          <a ui-sref="project({id: activity.id})" >
+            <div class="col-sm-12">
+              <div class="enrollment-card">
+                <img ng-src="data:image/png;base64,{{enrollment.image}}" style="width: 60px; height: 55px" alt="" />
+                <h6>{{enrollment.name}}</h6>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
     </div>
 </div>
